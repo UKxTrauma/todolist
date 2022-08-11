@@ -66,9 +66,10 @@ li button {
   border: none;
 }
 
-#completed {
-  display: none;
+.color1 {
+  color: silver;
 }
-#completed:checked + label {
+
+.color2 {
   color: green;
 }
