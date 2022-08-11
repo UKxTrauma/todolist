@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&display=swap');
+
+* {
+    font-family: 'Elsie', cursive;
+    padding: 0em;
+    margin: 0em;
+    font-size: 1em;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: rgb(36, 37, 55);
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1em, 3vh, 4vh);
+}
+
+.App {
+  min-height: 80vh;
+  text-align: center;
+  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4vh 6vw 4vh 6vw;
+  padding: 0em 2em 2em 2em;
+  box-sizing: border-box;
+  border-radius: 3.5em;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0em 0.1em 0.4em rgb(255, 255, 255);
+  background-color: rgba(155, 231, 237, 0.774);
+  color:rgb(36, 37, 55);
 }
 
-.App-link {
-  color: #61dafb;
+.top {
+  font-family: 'Monofett', cursive;
+  font-size: 8vw;
+  color: rgb(36, 37, 55);
+  font-weight: 100;
+  text-shadow: 0em 0em 0.25em rgb(36, 37, 55);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  background: rgb(36, 37, 55);
+  margin-top: 1.25em;
+  margin-bottom: 1.5em;
+  color: rgb(12, 111, 124);
+}
+
+button {
+  width: 1.5em;
+  background: none;
+}
+
+.listBox {
+  background-color: rgb(36, 37, 55);
+  width: 90%;
+  border-radius: 5%;
+  color: rgb(12, 111, 124);
+  text-shadow: 1.5px 0px 1px rgb(255, 255, 255);
+}
+
+li button {
+  border: none;
+}
+
+#completed {
+  display: none;
+}
+#completed:checked + label {
+  color: green;
 }
