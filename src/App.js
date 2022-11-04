@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import plus from './plus.png'
 
 class App extends Component {
     constructor(props){
@@ -49,22 +50,22 @@ class App extends Component {
       return (
         <div className="App">
           <h1 className="top">TODO LIST</h1>
-          <div>
+          <div id="combo">
             <input
               type="text"
               placeholder="Type task here..."
               value={this.state.newItem}
               onChange={e => this.updateInput("newItem", e.target.value)}/>
-            <button onClick={() => this.addItem()}>+</button>
+            <button onClick={() => this.addItem()}><img src={plus} alt="+" id='plus'/></button>
           </div>
           <div className="listBox">
             <ul>
               {this.state.list.map((item, index) => {
                 return(
                   <li key={item.id}>
-                    <button onClick={() => this.deleteItem(item.id)}>🗑️</button>
+                    <button onClick={() => this.deleteItem(item.id)} id='bin'>🗑️</button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button onClick={() => this.setColor(index)} className={item.colorCheck ? "color2" : "color1"}>✔</button>
+                    <button onClick={() => this.setColor(index)} className={item.colorCheck ? "color2" : "color1"} id='tick'>✔</button>
                   </li>
                 )
               })}
